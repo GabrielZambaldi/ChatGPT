@@ -1,0 +1,83 @@
+
+import React from 'react';
+import { 
+    View, 
+    Text, 
+    StyleSheet,
+    Image, 
+    TouchableOpacity
+} from 'react-natve';
+
+export default function Welcome() {
+    return (
+        <View styles={styles.container}>
+            
+            <View style={styles.containerLogo}>
+                <Image 
+                    source={require('../../assets/OpeAI.png')}
+                    style={{ width: '100%'}}
+                    resizeMode="contain"
+                />
+            </View>
+        <View style={styles.containerForm}>
+            <Text styles={styles.title}>Olá visitante!</Text>
+            <Text styles={styles.title}>Seja bem vindo.</Text>
+            <Text styles={styles.text}>Como posso ajudar?</Text>
+
+            <TouchableOpacity styles={styles.button}>
+                <Text styles={styles.Text}>Iniciar chat</Text>
+            </TouchableOpacity>
+
+        </View>
+
+        <View/>
+    );
+}
+
+cont styles = StyleSheet.create({
+    container:{
+        flex:1,
+
+    },
+    containerLogo:{
+        flex:2,
+        backgroundColer: 'white'
+        justifyContent: 'center'
+        alignItems: 'center'
+    },
+    containerForm:{
+        flex:1,
+        backgroundColer: '#FFF'
+        borderTopLeftRadius: 25,
+        borderTopRightRadius: 25,
+        paddingStart: '5%'
+        paddindEnd: '5%'
+
+    },
+    title:{
+        fontSize: 24,
+        fontWeight:'bold'
+        marginTop: 28,
+        marginBotton: 12,
+    },
+    text:{
+
+    },
+    buton:{
+        position: 'absolut'
+        backgroundColor: '#8000FF'
+        borderRadius: 0,
+        paddingVertical: 8,
+        width: '60%'
+        alignSelf: 'center'
+        bottom: '15%'
+        alignItems: 'center'
+        justifyContent: 'center'
+    },
+    buttonText:{
+        fontSize: 18,
+        color: '#000000'
+        fontWeight: 'bold'
+    },
+
+})
